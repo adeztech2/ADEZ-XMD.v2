@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: adez-xmd
+    runtime: docker
+    plan: free
+    healthCheckPath: /
+    autoDeploy: false
+    envVars:
+      - key: MONGODB_URI
+        sync: false
+      - key: SESSION_ID
+        sync: false
+      - key: OWNER_NUMBER
+        sync: false
+      - key: PAIRING_NUMBER
+        sync: false
+      - key: BOT_NAME
+        value: ADEZ XMD
+      - key: PREFIX
+        value: "."
+      - key: MODE
+        value: public
