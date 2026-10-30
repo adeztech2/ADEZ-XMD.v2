@@ -12,7 +12,9 @@ module.exports = {
   mode: (process.env.MODE || 'public').toLowerCase(),
   // Owner number(s): digits only with country code, comma separated
   owners: String(process.env.OWNER_NUMBER || '').split(',').map(digits).filter(Boolean),
-  // First login only: your number, the bot prints a pairing code in the logs
+  // Session ID made by your pair site (any prefix, e.g. NEXUS~...)
+  sessionId: (process.env.SESSION_ID || '').trim(),
+  // Optional fallback: link with a pairing code printed in the logs instead of a session ID
   pairingNumber: digits(process.env.PAIRING_NUMBER),
   // MongoDB keeps the whole session safe across restarts and redeploys
   mongoUri: process.env.MONGODB_URI || '',
