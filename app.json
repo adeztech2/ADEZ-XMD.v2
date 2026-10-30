@@ -1,0 +1,30 @@
+{
+  "name": "ADEZ XMD",
+  "description": "ADEZ XMD WhatsApp bot by Arnold Adez",
+  "keywords": ["whatsapp", "bot", "nodejs"],
+  "stack": "container",
+  "env": {
+    "MONGODB_URI": {
+      "description": "MongoDB Atlas connection string (keeps your WhatsApp session safe)",
+      "required": true
+    },
+    "SESSION_ID": {
+      "description": "Session ID from your pair site",
+      "required": true
+    },
+    "OWNER_NUMBER": {
+      "description": "Your number, digits only with country code",
+      "required": true
+    },
+    "PAIRING_NUMBER": {
+      "description": "Optional. Only if you have no session ID: your number, to get a pairing code in the logs. Remove it after linking.",
+      "required": false
+    },
+    "BOT_NAME": { "value": "ADEZ XMD" },
+    "PREFIX": { "value": "." },
+    "MODE": { "value": "public" }
+  },
+  "formation": {
+    "worker": { "quantity": 1, "size": "basic" }
+  }
+}
