@@ -1,0 +1,19 @@
+{
+  "name": "adez-xmd",
+  "version": "2.0.0",
+  "description": "ADEZ XMD - a small, stable WhatsApp bot",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "engines": {
+    "node": "20.x"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@whiskeysockets/baileys": "6.7.22",
+    "dotenv": "^16.4.5",
+    "mongodb": "^6.10.0",
+    "pino": "^9.4.0"
+  }
+}
